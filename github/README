@@ -1,0 +1,5 @@
+Copy desired versions of expertsrc and doit into this directory before running bootstrap.sh.
+
+The copies should be zipped and should be named as follows:
+expertsrc-master.zip
+doit-master.zip

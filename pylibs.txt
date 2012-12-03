@@ -1,0 +1,13 @@
+# python packages to be auto-installed by pip in the new virtual env
+requirements/lib-tarballs/redis-py-2.6.1.tar.gz 
+requirements/lib-tarballs/psycopg2-2.4.5.tar.gz 
+requirements/lib-tarballs/meld3-0.6.5.tar.gz
+requirements/lib-tarballs/elementtree-1.2.6-20050316.tar.gz
+requirements/lib-tarballs/supervisor-3.0b1.tar.gz
+requirements/lib-tarballs/sympy-0.7.1.tar.gz
+requirements/lib-tarballs/Django-1.4.tar.gz 
+requirements/lib-tarballs/uwsgi-1.2.6.tar.gz
+requirements/lib-tarballs/south-0.7.6.tar.gz
+requirements/lib-tarballs/pystache.tar.gz
+requirements/lib-tarballs/PuLP-1.4.7.tar.gz
+requirements/lib-tarballs/protobuf-2.4.1.tar.gz
