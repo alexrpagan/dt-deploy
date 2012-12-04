@@ -33,3 +33,9 @@ nosetests.xml
 .mr.developer.cfg
 .project
 .pydevproject
+
+# the virtualenv
+ve/
+
+github/expertsrc.tar.gz
+github/doit.tar.gz
