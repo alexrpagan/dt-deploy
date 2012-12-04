@@ -5,7 +5,7 @@ import pystache
 META = {
     # absolute path to the location of the virtual env.
     # should be join(absolute-path-to-dt-deploy, 've')
-    'VEROOT': '/home/apagan/deploy/ve',
+    'VEROOT': '/home/apagan/dt-deploy/ve',
     # optional: name of postgres DB user 
     'POSTGRES_USER': 'postgres',
     # optional: command to start postgres
