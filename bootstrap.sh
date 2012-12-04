@@ -3,7 +3,7 @@ set -e
 dr=`pwd`
 if [ -d "$dr/ve" ]
     then
-        rm -r "$dr/ve"
+        rm -rf "$dr/ve"
 fi
 
 python "$dr/scripts/virtualenv.py" \
@@ -55,14 +55,12 @@ make install
 rm -rf "$dr/$glpk_pkg"
 cd "$dr"
 
-expertsrc_pkg='expertsrc-master'
-unzip -d "$dr/github/" "$dr/github/$expertsrc_pkg.zip"
-mv "$dr/github/$expertsrc_pkg" "$dr/ve/apps/expertsrc"
+expertsrc_pkg='expertsrc'
+tar -xzvf "$dr/github/$expertsrc_pkg.tar.gz" -C "$dr/ve/apps/"
 cp "$dr/settings-files/expertsrc-settings.py" "$dr/ve/apps/expertsrc/www/expertsrc/settings.py"
 
-doit_pkg='doit-master'
-unzip -d "$dr/github" "$dr/github/$doit_pkg.zip" 
-mv "$dr/github/$doit_pkg" "$dr/ve/apps/doit"
+doit_pkg='doit'
+tar -xzvf "$dr/github/$doit_pkg.tar.gz" -C "$dr/ve/apps/"
 cp "$dr/settings-files/doit-settings.py" "$dr/ve/apps/doit/www/doitweb/settings.py"
 
 cd "$dr/ve"
