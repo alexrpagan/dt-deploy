@@ -74,6 +74,15 @@ TEMPLATE_LOADERS = (
 #     'django.template.loaders.eggs.Loader',
 )
 
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.debug',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.media',
+    'django.core.context_processors.static',
+    'django.contrib.messages.context_processors.messages',
+)
+
 MIDDLEWARE_CLASSES = (
 #    'ui.middleware.SearchPath',
     'django.middleware.common.CommonMiddleware',
@@ -105,25 +114,7 @@ AUTH_PROFILE_MODULE = 'ui.UserProfile'
 
 STATIC_DOC_ROOT =  PROJECT_ROOT + "expertsrc/www/static"
 
-#TEST_DOMAIN_NAME = 'ski'
-
-# import logging
-
-# logging.basicConfig(
-#     filename = '/home/apagan/logs/err.log',
-#     level = logging.DEBUG,
-#     format = '%(asctime)s %(message)s',
-# )
-
-LOGIN_URL = '/login'
-
-STATIC_URL = '/media/'
-
-TAMER_URL = 'http://{{{SERVER_NAME}}}:{{{DATA_TAMER_PORT}}}'
-
 TAMER_DB = '{{{DOIT_DB}}}'
-
-#WATCHER_LOGFILE = '/home/apagan/logs/watchers.log'
 
 MASK_LEVELS = True
 
@@ -176,3 +167,16 @@ LOGGING = {
         },
     }
 }
+
+BASE_URL = '{{{BASE_URL}}}'
+
+ALT_ROOT = '{{{EXPERTSRC_ALT_ROOT}}}'
+
+STATIC_URL = ''.join((ALT_ROOT, '/static/',))
+
+LOGIN_URL = ''.join((ALT_ROOT, '/login/',))
+
+TAMER_URL = 'http://{{{SERVER_NAME}}}:{{{DATA_TAMER_PORT}}}'
+
+
+

@@ -5,7 +5,7 @@ import pystache
 META = {
     # absolute path to the location of the virtual env.
     # should be join(absolute-path-to-dt-deploy, 've')
-    'VEROOT': '/home/apagan/dt-deploy/ve',
+    'VEROOT': '/Users/apagan/Dev/dt-deploy/ve',
     # optional: name of postgres DB user 
     'POSTGRES_USER': 'postgres',
     # optional: command to start postgres
@@ -23,19 +23,24 @@ META = {
     'DATA_TAMER_PORT': '7979',
     # user to start webserver with
     'NGINX_USER': 'apagan',
-    # hostname of the server. NB: This is used to construct URLs
-    'SERVER_NAME': 'modis.csail.mit.edu',
+    # hostname of the server.
+    # TODO: make sure that this isn't used to make urls 
+    'SERVER_NAME': 'localhost',
+    # hostname that will be used to build urls 
+    'BASE_URL': '',
     # database info
-    'DOIT_DB': 'goby',
-    'DOIT_DB_USER': 'apagan',
+    'DOIT_DB': 'doit',
+    'DOIT_DB_USER': 'doit',
     'DOIT_DB_PASS': '12345',
-    'DOIT_DB_PORT': '5433',
+    'DOIT_DB_PORT': '5432',
     'DOIT_DB_HOST': 'localhost',
+    'DOIT_ALT_ROOT': '',
     'EXPERTSRC_DB': 'expertsrc',
-    'EXPERTSRC_DB_USER': 'apagan',
+    'EXPERTSRC_DB_USER': 'expertsrc',
     'EXPERTSRC_DB_PASS': '12345',
-    'EXPERTSRC_DB_PORT': '5433',
+    'EXPERTSRC_DB_PORT': '5432',
     'EXPERTSRC_DB_HOST': 'localhost',
+    'EXPERTSRC_ALT_ROOT': '',
 }
 
 def rewrite_file(filename, aliases):
