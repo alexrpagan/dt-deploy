@@ -13,11 +13,10 @@ Clone expertsrc and doit (data-tamer core).
     cd $DT/github
     git clone https://github.com/alexrpagan/expertsrc.git
     git clone https://github.com/alexrpagan/doit.git
-    cd ..
 
 Install python packages and binaries.
 
-    $DT/bootstrap.sh
+    . $DT/bootstrap.sh
 
 Create databases.
 
@@ -38,7 +37,7 @@ Modify site-specific settings. These are found in the META dict in insert-meta.p
 
 Install site-specific settings.
 
-    $DT/reset_settings.sh
+    . $DT/reset_settings.sh
 
 Initialize data tamer database
 
