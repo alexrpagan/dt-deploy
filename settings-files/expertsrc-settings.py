@@ -81,6 +81,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.media',
     'django.core.context_processors.static',
     'django.contrib.messages.context_processors.messages',
+    'middleware.url_context',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -172,11 +173,10 @@ BASE_URL = '{{{BASE_URL}}}'
 
 ALT_ROOT = '{{{EXPERTSRC_ALT_ROOT}}}'
 
-STATIC_URL = ''.join((ALT_ROOT, '/static/',))
+#STATIC_URL = ''.join((ALT_ROOT, '/static/',))
 
-LOGIN_URL = ''.join((ALT_ROOT, '/login/',))
+STATIC_URL = '/static/'
 
-TAMER_URL = 'http://{{{SERVER_NAME}}}:{{{DATA_TAMER_PORT}}}'
+LOGIN_URL = ''.join((ALT_ROOT, 'login/',))
 
-
-
+TAMER_URL = 'http://{{{SERVER_NAME}}}:{{{DATA_TAMER_PORT}}}/{{{DOIT_ALT_ROOT}}}'

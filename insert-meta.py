@@ -34,13 +34,13 @@ META = {
     'DOIT_DB_PASS': '12345',
     'DOIT_DB_PORT': '5432',
     'DOIT_DB_HOST': 'localhost',
-    'DOIT_ALT_ROOT': '',
+    'DOIT_ALT_ROOT': 'apps/datatamer',
     'EXPERTSRC_DB': 'expertsrc',
     'EXPERTSRC_DB_USER': 'expertsrc',
     'EXPERTSRC_DB_PASS': '12345',
     'EXPERTSRC_DB_PORT': '5432',
     'EXPERTSRC_DB_HOST': 'localhost',
-    'EXPERTSRC_ALT_ROOT': '',
+    'EXPERTSRC_ALT_ROOT': 'apps/expertsrc',
 }
 
 def rewrite_file(filename, aliases):

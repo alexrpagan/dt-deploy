@@ -36,7 +36,9 @@ nosetests.xml
 # the virtualenv
 ve/
 
-github/expertsrc.tar.gz
-github/doit.tar.gz
+# web app source respositories
+github/expertsrc
+github/doit
 
+# Finder metadata (mac)
 .DS_Store

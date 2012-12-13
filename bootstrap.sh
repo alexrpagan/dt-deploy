@@ -1,4 +1,16 @@
 #!/bin/bash
+#
+# Usage: ./bootstrap.sh
+#
+# This script will create a new Python virtualenv at ./ve
+# and install all of the binaries and python libraries.
+#
+# Note that this version of virtualenv requires Python 2.5
+# or greater.
+#
+# run ./reset_settings.sh to fill in templated conf files
+# with site-specific settings. 
+
 set -e
 dr=`pwd`
 if [ -d "$dr/ve" ]
@@ -6,7 +18,7 @@ if [ -d "$dr/ve" ]
         rm -rf "$dr/ve"
 fi
 
-python "$dr/scripts/virtualenv.py" \
+python "$dr/virtualenv.py" \
     --extra-search-dir="$dr/requirements/virtualenv-support" \
     --never-download \
     "$dr/ve"
@@ -16,7 +28,7 @@ python "$dr/scripts/virtualenv.py" \
     --index-url='' \
     --requirement="$dr/pylibs.txt"
 
-python "$dr/scripts/virtualenv.py" --relocatable "$dr/ve"
+python "$dr/virtualenv.py" --relocatable "$dr/ve"
 
 declare -a new_dirs=(log pid apps etcs tmp sock pkg)
 for dir in "${new_dirs[@]}"
@@ -55,14 +67,6 @@ make install
 rm -rf "$dr/$glpk_pkg"
 cd "$dr"
 
-expertsrc_pkg='expertsrc'
-tar -xzvf "$dr/github/$expertsrc_pkg.tar.gz" -C "$dr/ve/apps/"
-cp "$dr/settings-files/expertsrc-settings.py" "$dr/ve/apps/expertsrc/www/expertsrc/settings.py"
+cp -r "$dr/github/expertsrc" "$dr/ve/apps/expertsrc"
+cp -r "$dr/github/doit" "$dr/ve/apps/doit"
 
-doit_pkg='doit'
-tar -xzvf "$dr/github/$doit_pkg.tar.gz" -C "$dr/ve/apps/"
-cp "$dr/settings-files/doit-settings.py" "$dr/ve/apps/doit/www/doitweb/settings.py"
-
-cd "$dr/ve"
-./bin/python "$dr/scripts/insert-meta.py" || exit
-cd "$dr"

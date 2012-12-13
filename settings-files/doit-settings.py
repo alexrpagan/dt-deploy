@@ -74,6 +74,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.media',
     'django.core.context_processors.static',
     'django.contrib.messages.context_processors.messages',
+    'middleware.url_context',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -163,6 +164,11 @@ BASE_URL = '{{{BASE_URL}}}'
 
 ALT_ROOT = '{{{DOIT_ALT_ROOT}}}'
 
-STATIC_URL = ''.join((ALT_ROOT, '/static/',))
+#STATIC_URL = ''.join((ALT_ROOT, '/static/',))
 
-EXPERTSRC_URL = 'http://{{{SERVER_NAME}}}:{{{EXPERTSRC_PORT}}}'
+STATIC_URL = '/static/' 
+
+LOGIN_URL = ''.join((ALT_ROOT, 'login/',))
+
+EXPERTSRC_URL = 'http://{{{SERVER_NAME}}}:{{{EXPERTSRC_PORT}}}/{{{EXPERTSRC_ALT_ROOT}}}'
+
