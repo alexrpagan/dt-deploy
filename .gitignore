@@ -38,3 +38,5 @@ ve/
 
 github/expertsrc.tar.gz
 github/doit.tar.gz
+
+.DS_Store
