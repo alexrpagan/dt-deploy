@@ -6,7 +6,10 @@ Deployment scripts for Data-Tamer.
 Setup
 ----------
 
+Note that '$DT' is the absolute path to dt-deploy.
+
 Make sure that you have working installations of gcc, gmake, Postgres 9.1+, Python 2.5+ and plpython. Also make sure that header files for python and postgres are installed (e.g. libpq-dev, python-dev in Ubuntu).
+
 
 Clone expertsrc and doit (data-tamer core).
 
