@@ -39,9 +39,6 @@ do
     fi
 done
 
-cp -r "$dr/conf-files/dev" "$dr/ve/etcs"
-ln -s "$dr/ve/etcs/dev" "$dr/ve/etc"
-
 nginx_pkg='nginx-1.2.3'
 tar -xvf "$dr/requirements/lib-tarballs/$nginx_pkg.tar.gz" 
 cd "$dr/$nginx_pkg"

@@ -15,15 +15,15 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2', 
-        'NAME': '{{{EXPERTSRC_DB}}}',                      
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': '{{{EXPERTSRC_DB}}}',
         'USER': '{{{EXPERTSRC_DB_USER}}}',
         'PASSWORD': '{{{EXPERTSRC_DB_PASS}}}',
         'HOST': '{{{EXPERTSRC_DB_HOST}}}',
         'PORT': '{{{EXPERTSRC_DB_PORT}}}',
     },
     '{{{DOIT_DB}}}': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2', 
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': '{{{DOIT_DB}}}',
         'USER': '{{{DOIT_DB_USER}}}',
         'PASSWORD': '{{{DOIT_DB_PASS}}}',
@@ -173,10 +173,10 @@ BASE_URL = '{{{BASE_URL}}}'
 
 ALT_ROOT = '{{{EXPERTSRC_ALT_ROOT}}}'
 
-#STATIC_URL = ''.join((ALT_ROOT, '/static/',))
+#STATIC_URL = ''.join(('/', ALT_ROOT, '/static/',))
 
 STATIC_URL = '/static/'
 
-LOGIN_URL = ''.join((ALT_ROOT, 'login/',))
+LOGIN_URL = ''.join(('/', ALT_ROOT, 'login/',))
 
 TAMER_URL = 'http://{{{SERVER_NAME}}}:{{{DATA_TAMER_PORT}}}/{{{DOIT_ALT_ROOT}}}'

@@ -164,11 +164,11 @@ BASE_URL = '{{{BASE_URL}}}'
 
 ALT_ROOT = '{{{DOIT_ALT_ROOT}}}'
 
-#STATIC_URL = ''.join((ALT_ROOT, '/static/',))
+#STATIC_URL = ''.join(('/', ALT_ROOT, '/static/',))
 
-STATIC_URL = '/static/' 
+STATIC_URL = '/static/'
 
-LOGIN_URL = ''.join((ALT_ROOT, 'login/',))
+LOGIN_URL = ''.join(('/', ALT_ROOT, 'login/',))
 
 EXPERTSRC_URL = 'http://{{{SERVER_NAME}}}:{{{EXPERTSRC_PORT}}}/{{{EXPERTSRC_ALT_ROOT}}}'
 
