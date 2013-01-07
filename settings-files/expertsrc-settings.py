@@ -177,6 +177,10 @@ ALT_ROOT = '{{{EXPERTSRC_ALT_ROOT}}}'
 
 STATIC_URL = '/static/'
 
-LOGIN_URL = ''.join(('/', ALT_ROOT, 'login/',))
+LOGIN_URL = ''.join(('/', ALT_ROOT, '/login/',))
 
 TAMER_URL = 'http://{{{SERVER_NAME}}}:{{{DATA_TAMER_PORT}}}/{{{DOIT_ALT_ROOT}}}'
+
+CONSENT = {{{CONSENT}}}
+
+TRAINING = {{{TRAINING}}}
