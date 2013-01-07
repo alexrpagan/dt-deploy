@@ -1,5 +1,4 @@
 # python packages to be auto-installed by pip in the new virtual env
-requirements/lib-tarballs/redis-py-2.6.1.tar.gz 
 requirements/lib-tarballs/psycopg2-2.4.5.tar.gz 
 requirements/lib-tarballs/meld3-0.6.5.tar.gz
 requirements/lib-tarballs/elementtree-1.2.6-20050316.tar.gz
