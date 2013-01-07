@@ -48,13 +48,6 @@ cp objs/nginx "$dr/ve/bin/nginx"
 rm -rf "$dr/$nginx_pkg"
 cd "$dr"
 
-redis_pkg='redis-2.4.17'
-tar -xvf "$dr/requirements/lib-tarballs/$redis_pkg.tar.gz"
-cd "$dr/$redis_pkg"
-make PREFIX="$dr/ve" install
-rm -rf "$dr/$redis_pkg"
-cd "$dr"
-
 glpk_pkg='glpk-4.35'
 tar -xvf "$dr/requirements/lib-tarballs/$glpk_pkg.tar.gz"
 cd "$dr/$glpk_pkg"

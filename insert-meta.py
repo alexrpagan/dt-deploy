@@ -10,9 +10,6 @@ META = {
     'POSTGRES_USER': 'postgres',
     # optional: command to start postgres
     'POSTGRES_START_CMD': '',
-    # user to start redis service.
-    'REDIS_USER': 'apagan',
-    'REDIS_PORT': '6379',
     # user to start expertsrc uwsgi instance
     'EXPERTSRC_USER': 'apagan',
     # port for expertsrc to listen on
@@ -35,12 +32,15 @@ META = {
     'DOIT_DB_PORT': '5432',
     'DOIT_DB_HOST': 'localhost',
     'DOIT_ALT_ROOT': 'apps/data-tamer',
+    'DOIT_SOURCE_SCHEMA': 'golf',
     'EXPERTSRC_DB': 'expertsrc',
     'EXPERTSRC_DB_USER': 'expertsrc',
     'EXPERTSRC_DB_PASS': '12345',
     'EXPERTSRC_DB_PORT': '5432',
     'EXPERTSRC_DB_HOST': 'localhost',
     'EXPERTSRC_ALT_ROOT': 'apps/expertsrc',
+    'CONSENT': True,
+    'TRAINING': True
 }
 
 def rewrite_file(filename, aliases):
