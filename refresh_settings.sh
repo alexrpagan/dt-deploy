@@ -4,7 +4,7 @@ dr=`pwd`
 
 # settings files for services 
 cp -r "$dr/conf-files/dev" "$dr/ve/etcs"
-if [ -e "dr/ve/etc" ]; then
+if ! [ -e "dr/ve/etc" ]; then
     ln -s "$dr/ve/etcs/dev" "$dr/ve/etc"
 fi
 
