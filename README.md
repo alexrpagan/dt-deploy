@@ -51,10 +51,11 @@ Initialize expertsrc database
     # activate virtualenv
     . $DT/ve/bin/activate
     cd $DT/ve/apps/expertsrc
-    . ./sql/init "expertsrc -U expertsrc"
     python ./www/expertsrc/manage.py syncdb
     # follow instructions...
     python ./www/expertsrc/manage.py migrate ui
+    # initialize expertsrc UDFs, tables, and views
+    . ./sql/init "expertsrc -U expertsrc"
     # create fake crowd workers
     python ./www/expertsrc/manage.py create_users
     # reset market
